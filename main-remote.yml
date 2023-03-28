@@ -1,0 +1,12 @@
+---
+# Exercise for setting up a web server in an EC
+- name: Exercise for setting up a web server in an EC
+  # hosts: ubuntu
+  # Use the publich IP if the VM is already created
+  hosts: 54.90.24.127 #ec2-18-210-17-244.compute-1.amazonaws.com  
+  user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+   - setup
